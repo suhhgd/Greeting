@@ -1,10 +1,10 @@
-package sg.edu.nus.iss.club.sub;
+package sg.edu.nus.iss.club.oscar;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class MemberTest {
+public class ClubTest {
 
 	@Test
 	public void test() {
