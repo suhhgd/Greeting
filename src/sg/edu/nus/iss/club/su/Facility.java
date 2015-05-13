@@ -4,7 +4,7 @@ public class Facility {
 	
 	private String name;
 	private String description;
-	
+		
 	public Facility(String name)
 	{
 		this.name=name;
