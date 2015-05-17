@@ -1,5 +1,7 @@
 package sg.edu.nus.iss.club.su;
 
+import sg.edu.nus.iss.club.oscar.Club;
+
 public class ClubApplication {
 
 	public static void main(String[] args) {
@@ -22,9 +24,17 @@ public class ClubApplication {
 		m1.show();
 		m2.show();
 		System.out.println("********Club**************");
-		Club c= new Club();
-		Member me=c.addMember("Su", "H", "H");		
-		me.show();
+		Club c = new Club();
+		System.out.println("******** Add 4 members**************");
+	    c.addMember("Su", "H", "H");		
+	    c.addMember("Su2", "H", "H");	
+	    c.addMember("S3", "H", "H");	
+	    c.addMember("Su4", "H", "H");	
+	    c.showMemeber();
+		System.out.println("******** Remove 3rd Members**************");
+		c.removeMember(3);
+		c.showMemeber();
+		
 	
 		
 		

@@ -28,6 +28,19 @@ public class Club {
 		return m;
 	}
 	
+	public void removeMember(int memberid)
+	{
+		if ((memberid < 1) || (memberid > numMembers)) {
+            return;
+        }
+        if (memberlist[numMembers-1] != null) {
+        	memberlist[numMembers-1] = null;
+            count--;
+        }
+	}
+	
+
+	
 	public Member[]  getMembers()
 	{
 		Member newMembers[];
@@ -35,6 +48,7 @@ public class Club {
 		return newMembers;
 		
 	}
+	
 	public void showMember()
 	{
 		Member newMembers[]=getMembers();
@@ -44,6 +58,8 @@ public class Club {
 			System.out.println(m.getSurname()+m.getFirstname()+m.getSecondname()+m.getMembershipid());
 		}
 	}
+	
+
 	
 	public Member addMember(String surname,String firstname,String secondname)
 	{
