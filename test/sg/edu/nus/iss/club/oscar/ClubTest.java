@@ -1,4 +1,4 @@
-package sg.edu.nus.iss.club.sub;
+package sg.edu.nus.iss.club.oscar;
 
 import static org.junit.Assert.*;
 
@@ -6,9 +6,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import sg.edu.nus.iss.club.su.Member;
 
-public class MemberTest {
+
+
+public class ClubTest {
+
 
 	private Member m;
 	@Before
