@@ -6,34 +6,28 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import sg.edu.nus.iss.club.su.Member;
+import sg.edu.nus.iss.club.su.Person;
 
-public class MemberTest {
-
-	private Member m;
+public class PersonTest {
+	private Person p;
 	@Before
 	public void setUp() throws Exception {
-		m= new Member("Kwon", "Ji", "Yong",8888);		
+		p= new Person("Kwon", "Ji", "Yong");		
 	}
 	
 	@After
 	public void tearDown()
 	{
-		m=null;
+		p=null;
 	}
 	
 	@Test
 	public void testToString() {
 		//fail("Not yet implemented");
+	  assertEquals(p.getFirstname(),"Kwon");
+	  
 	}
-	@Test
-	public void testgetMembershipid() {
-		assertTrue("Ji Yong Membership id is his favorite number", m.getMembershipid()==8888);
-		
-		
-		
-	}
-
+	
 	
 
 }

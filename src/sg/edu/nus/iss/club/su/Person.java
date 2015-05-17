@@ -13,10 +13,15 @@ public class Person {
 		this.secondname=secondname;
 		
 	}
-	public void show()
+	public String toString()
 	{
-		String fullname=getSurname()+getFirstname()+getSecondname();
-		System.out.println(fullname);
+		String fullname=getSurname()+" "+getFirstname()+" "+getSecondname();
+		return fullname;
+	}
+	
+	public void show()
+	{		
+		System.out.println(toString());
 	}
 	public String getSurname() {
 		return surname;
