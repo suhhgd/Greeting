@@ -4,7 +4,7 @@ public class Facility {
 	
 	private String name;
 	private String description;
-	
+		
 	public Facility(String name)
 	{
 		this.name=name;
@@ -16,14 +16,18 @@ public class Facility {
 	}
 	public void show()
 	{
+		System.out.println(toString());
+		
+	}
+	public String toString()
+	{
 		String print=this.getName();
 		
 		if(this.getDescription()!=null)
 		{
 			print+="("+this.getDescription()+")";
 		}
-		System.out.println(print);
-		
+		return print;
 	}
 
 	public String getDescription() {

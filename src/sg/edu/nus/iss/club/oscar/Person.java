@@ -1,30 +1,30 @@
 package sg.edu.nus.iss.club.oscar;
 
 public class Person {
-	private String surname;
-	private String firstname;
+	private String surName;
+	private String firstName;
 	private String secondName;
 	
 	public Person(String surname, String firstname, String secondName) {
-		this.surname = surname;
-		this.firstname = firstname;
+		this.surName = surname;
+		this.firstName = firstname;
 		this.secondName = secondName;
 	}
 
-	public String getSurname() {
-		return surname;
+	public String getSurName() {
+		return surName;
 	}
 
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public void setSurName(String surName) {
+		this.surName = surName;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getSecondName() {
@@ -35,9 +35,12 @@ public class Person {
 		this.secondName = secondName;
 	}
 	
-	public String show(){
-		String fullName = this.firstname + " " + this.secondName + " " + this.surname;
-		System.out.println(fullName);
+	public void show(){
+		System.out.println(this.toString());
+	}
+	
+	public String toString(){
+		String fullName = this.firstName + " " + this.secondName + " " + this.surName;
 		return fullName;
 	}
 }
