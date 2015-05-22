@@ -1,37 +1,28 @@
 package sg.edu.nus.iss.club.oscar;
 
+import java.util.ArrayList;
+
 public class Club {
 	public static final int ARRAY_SIZE_INCREMENT = 5;
 	private int numMember;
 	private int count;
-	Member members[];
+	private ArrayList<Member> members;
 
 	public Club() {
 		numMember = 1;
 		count = 1;
-		members = new Member[ARRAY_SIZE_INCREMENT];
+		members = new ArrayList<Member>();
 	}
 
 	public void addMember(String surname, String firstname, String secondName) {
-		if (members.length <= numMember) {
-			increaseArraySize();
-		}
 		Member m = new Member(surname, firstname, secondName, numMember);
-		members[numMember] = m;
+		members.add(m);
 		numMember++;
 	}
 
-	private void increaseArraySize() {
-		Member newArray[] = new Member[members.length + ARRAY_SIZE_INCREMENT];
-		for (Member m : members) {
-			if (m != null)
-				newArray[m.memberNumber] = m;
-		}
-		members = newArray;
-	}
-
-	public Member[] getMembers() {
-		return members.clone();
+	@SuppressWarnings("unchecked")
+	public ArrayList<Member> getMembers() {
+		return (ArrayList<Member>) members.clone();
 	}
 
 	public void showMemeber() {
@@ -42,12 +33,17 @@ public class Club {
 	}
 
 	public Member getMember(int memberNum) {
-		return members[memberNum];
+		for (Member m : members) {
+			if (m.getMemberNumber() == memberNum) {
+				return m;
+			}
+		}
+		return null;
 	}
 
 	public Member removeMember(int memberNum) {
-		Member m = members[memberNum];
-		members[memberNum] = null;
+		Member m = getMember(memberNum);
+		members.remove(m);
 		return m;
 	}
 }
